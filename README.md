@@ -12,7 +12,9 @@
 ## Usage:
  To use this application press either continue or new workout and you will get sent to a page to add workouts for the workout day.
 
-Form there you will be prompted to select an exercise 
+From there you will be prompted to select an exercise either cardio or resistance and add relevant information for either.
+
+From there you can check stats from the dashboard page and past workouts.
 
 ### Questions:
 **What is your GitHub username?** My GitHub account can be found at https://github.com/DaniBoie
