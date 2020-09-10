@@ -8,18 +8,19 @@ router.get('/workouts', (req, res) => {
     .catch(err => console.log(err))
 })
 
+router.get('/workouts/range', (req, res) => {
+  // leave empty to get back everything
+  Workout.find()
+    .then(workout => res.json(workout))
+    .catch(err => console.log(err))
+})
+
 
 router.post('/workouts', (req, res) => {
   Workout.create(req.body)
     .then(workout => res.json(workout))
     .catch(err => console.log(err))
 })
-
-// router.put('/workouts/:id', (req, res) => {
-//   Workout.findByIdAndUpdate(req.params.id, req.body)
-//     .then(() => res.sendStatus(200))
-//     .catch(err => console.log(err))
-// })
 
 router.put('/workouts/:id', (req, res) => {
   Workout.findByIdAndUpdate(req.params.id, { $push: { exercises: req.body } })
